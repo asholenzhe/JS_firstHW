@@ -1,6 +1,8 @@
 function removeDuplicates(array) {
     let uniqueIndex = 0;
-
+    if (array.length === 0) {
+        return 0;
+    }
     array.forEach((value, i) => {
         if (i > 0 && value !== array[uniqueIndex]) {
             uniqueIndex++;
@@ -12,7 +14,6 @@ function removeDuplicates(array) {
             array[i] = '_';
         }
     });
-
-    return { array, uniqueCount: uniqueIndex + 1 };
+    return uniqueIndex + 1;
 }
 

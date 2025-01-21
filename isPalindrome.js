@@ -7,4 +7,3 @@ function isPalindrome(x) {
     return strX === strXReverse;
 }
 
-
